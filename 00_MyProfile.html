@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProfile</title>
+    <style>
+        :root{
+            --bg_color: rgb(43, 42, 42);
+            --test_color: white;
+            --border_color: transparent;
+            --btn_color: rgb(90, 35, 103);
+        }
+        body{
+            background-color: var(--bg_color);
+            color: var(--test_color);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+        .all{
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+        .all .header{
+            height: 100%;
+            border: none;
+        }
+        .header img{
+            width: 100%;
+            height: 683px;
+            border: 1px solid var(--border_color);
+        }
+        .all .content{
+            box-sizing: border-box;
+            display: grid;
+            grid-template-rows: 50% 45% 5%;
+            width: 100%;
+            height: 685px;
+            border: 1px solid var(--border_color);
+            text-align: center;
+        }
+        .content img{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .content .btn{
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            background-color: var(--btn_color);
+            color: white;
+        }
+        .content .footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <img src="82b307df952a248dd2b76f8d39f8224e.jpg" />
+        </div>
+        <div class="content">
+            <div>
+                <img src="1170794.jpg" />
+                <p>Mg Arkar Kyaw Thu</p>
+            </div>
+            
+            <div class="btn_gp">
+                <p></p>
+                <a><button class="btn">button</button></a>
+                <a><button class="btn">button</button></a>
+                <a><button class="btn">button</button></a>
+            </div>
+            <div class="footer">
+                @copy_right
+            </div>
+        </div>
+    </div>
+</body>
+</html>
