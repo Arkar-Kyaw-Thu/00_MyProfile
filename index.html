@@ -95,12 +95,12 @@
     }
 
     .image {
-      position: relative;
       width: 280px;
       height: 280px;
       border-radius: 50%;
       background: linear-gradient(135deg, #4aa3ff, #00e0ff);
       padding: 6px;
+      flex-shrink: 0;
     }
 
     .image img {
@@ -110,15 +110,30 @@
       background: #fff;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-container {
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
         text-align: center;
+        padding: 30px;
+      }
+
+      .image {
+        order: 1;
+        width: 220px;
+        height: 220px;
+      }
+
+      .text {
+        order: 2;                    /* text after image */
       }
 
       .buttons {
         justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .text h1 {
+        font-size: 32px;
       }
     }
   </style>
@@ -127,7 +142,6 @@
 
   <div class="container">
 
-    <!-- Left Content -->
     <div class="text">
       <p class="small">Welcome to my portfolio</p>
       <h1>Hello, my name’s <br><span>Arkar Kyaw Thu</span></h1>
@@ -141,7 +155,6 @@
       </div>
     </div>
 
-    <!-- Right Image -->
     <div class="image">
       <img src="1170794.jpg" alt="Profile">
     </div>
@@ -150,5 +163,3 @@
 
 </body>
 </html>
-
-
