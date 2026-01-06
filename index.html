@@ -16,15 +16,13 @@
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       color: #fff;
     }
 
     .container {
       width: 90%;
       max-width: 1100px;
+      margin: 60px auto;
       background: linear-gradient(135deg, #0b1d2d, #142f43);
       border-radius: 20px;
       padding: 50px;
@@ -110,6 +108,58 @@
       background: #fff;
     }
 
+    .card-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto 80px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #12283b, #183d57);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      color: #4aa3ff;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cbd9e6;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: #4aa3ff;
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      background: #2f8df0;
+    }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -118,13 +168,17 @@
       }
 
       .image {
-        order: 1;
+        order: 1;  
         width: 220px;
         height: 220px;
       }
 
       .text {
-        order: 2;                    /* text after image */
+        order: 2;
+      }
+
+      .text h1 {
+        font-size: 32px;
       }
 
       .buttons {
@@ -132,8 +186,8 @@
         flex-wrap: wrap;
       }
 
-      .text h1 {
-        font-size: 32px;
+      .cards {
+        grid-template-columns: repeat(2, 1fr); 
       }
     }
   </style>
@@ -141,24 +195,76 @@
 <body>
 
   <div class="container">
-
     <div class="text">
       <p class="small">Welcome to my portfolio</p>
       <h1>Hello, my name’s <br><span>Arkar Kyaw Thu</span></h1>
       <p class="desc">
-        I’m a student from computer studies of Pyay.
+        I’m a student from computer studies of Pyay, with a strong interest in web development and programming. I enjoy learning new technologies and improving my coding skills through practice and real projects.
       </p>
 
       <div class="buttons">
-        <a href="https://myprofile-nu-lime.vercel.app/" class="btn-primary">About me</a>
-        <a href="https://github.com/Arkar-Kyaw-Thu" class="btn-outline">my github</a>
+        <a href="#myproject" class="btn-primary">My Project</a>
+        <a href="https://github.com/Arkar-Kyaw-Thu" class="btn-outline">My GitHub</a>
       </div>
     </div>
 
     <div class="image">
       <img src="1170794.jpg" alt="Profile">
     </div>
+  </div>
 
+  <div class="card-section" id="myproject">
+    <h1>My Project</h1><br>
+    <div class="cards">
+      <div class="card">
+        <h3>SecondYear - FirstSem</h3>
+        <p>AboutPyay</p>
+        <p>(JavaScript Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/01_AboutPyay.git">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>SecondYear - SecondSem</h3>
+        <p>ElecticityBillPayment</p>
+        <p>(J2EE Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/02_ElectricityBillPayment.git">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>BusinessProject</h3>
+        <p>AgriculturalTradingSystem</p>
+        <p>(PHP Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/03_AgriculturalTradingSystem.git">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>ThirdYear - First Sem</h3>
+        <p>ElectronicService</p>
+        <p>(PHP Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/04_ElecronicService.git">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>ThirdYear - SecondSem</h3>
+        <p>BusTicket</p>
+        <p>(C# Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/05_BusTicket.git">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>FourthYear - SecondSem</h3>
+        <p>MSME Service</p>
+        <p>(Python + ML Project)</p>
+        <a href="https://github.com/Arkar-Kyaw-Thu/MSME-Service.git">Code Here</a>
+      </div>
+      <!-- <div class="card">
+        <h3>FinalYear - FirstSem</h3>
+        <p>......</p>
+        <p>......</p>
+        <a href="">Code Here</a>
+      </div>
+      <div class="card">
+        <h3>FinalYear - SecondSem</h3>
+        <p>......</p>
+        <p>......</p>
+        <a href="">Code Here</a> -->
+      </div>
+    </div>
   </div>
 
 </body>
